@@ -1,0 +1,32 @@
+<div class="navbar navbar-material-light-blue-300" ng-controller="headerController">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="javascript:void(0)"<>Tus Notas</a>
+  </div>
+  <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
+    <ul class="nav navbar-nav">
+      <li ng-show="!logueado()"><a href="#/">Iniciar Sesión</a></li>
+      <li ng-show="!logueado()"><a href="#/registro">Registro</a></li>
+      <li ng-show="logueado()"><a href="javascript:void(0)">Mis materias</a></li>
+      <li ng-show="logueado()"><a href="javascript:void(0)">Registrar Nota</a></li>
+      <li ng-show="logueado()"><a href="javascript:void(0)">Registrar Materia</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" ng-show="logueado()">
+      <li class="dropdown">
+        <a href="index.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">{{user.profile}}<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <!-- <li><a href="javascript:void(0)">Action</a></li>
+          <li><a href="javascript:void(0)">Another action</a></li>
+          <li><a href="javascript:void(0)">Something else here</a></li>
+          <li class="divider"></li> -->
+          <li><a href="javascript:void(0)" ng-click="logout()"><i class="mdi-action-exit-to-app" style="font-size: 16px">Salir</i></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+	
